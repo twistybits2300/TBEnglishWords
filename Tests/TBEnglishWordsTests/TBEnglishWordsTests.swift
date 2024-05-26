@@ -2,11 +2,26 @@ import XCTest
 @testable import TBEnglishWords
 
 final class TBEnglishWordsTests: XCTestCase {
-    func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
+}
 
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+struct TestFixture {
+    var word: String { "sensor" }
+    var ordinal: Int { 4971 }
+    
+    var commonWordJSON: String {
+        """
+          {
+            "ordinal" : 4971,
+            "text" : "sensor"
+          }
+        """
+    }
+    
+    func makeCommonWord() -> CommonWord {
+        CommonWord(text: word, ordinal: ordinal)
+    }
+    
+    func makeEmptyCommonWord() -> CommonWord {
+        CommonWord(text: "", ordinal: 0)
     }
 }
