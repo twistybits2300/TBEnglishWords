@@ -2,7 +2,7 @@ import Foundation
 
 /// Encapsulated meaning of a word, including its grammar identifier,
 /// a definition, optionally with further clarification and examples.
-public struct WordMeaning: Codable {
+public struct WordMeaning: Hashable, Codable {
     /// The grammar identifier (noun, adjective, etc.)
     public let partOfSpeech: PartOfSpeech
     

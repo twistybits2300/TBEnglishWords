@@ -1,7 +1,7 @@
 import Foundation
 
 /// Represents a word in a dictionary.
-public struct WordEntry: Codable {
+public struct WordEntry: Hashable, Codable {
     /// The dictionary word.
     public let word: String
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Identifies the part of English grammar a word belongs to.
-public enum PartOfSpeech: String, Codable {
+public enum PartOfSpeech: String, Hashable, Codable {
     case noun
     case pronoun
     case verb
